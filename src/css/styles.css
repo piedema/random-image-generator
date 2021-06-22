@@ -1,0 +1,21 @@
+div {
+    margin: 10px;
+}
+
+header img {
+    width: 500px;
+    height: 200px;
+}
+
+#random-image-container {
+    border: 3px dashed yellow;
+}
+
+#image-title {
+    display: block;
+    background-color: lightgreen;
+}
+
+#btn-generate {
+    display: inline-block;
+}
