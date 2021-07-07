@@ -8,29 +8,39 @@
     <body>
 
         <header>
-            <img src="src/images/header.jpg">
+            <img src="src/images/Promptgenerator_Header.svg">
         </header>
 
-        <div id="text-field">
-            Dit is een tekst test. Dit is een tekst test.
-            Dit is een tekst test. Dit is een tekst test.
-            Dit is een tekst test. Dit is een tekst test.
-            Dit is een tekst test. Dit is een tekst test.
+        <div id="generator1">
+
+            <img class="title" src="src/images/Promptgenerator_Kop1.svg">
+            <div class="image-container">
+                <img id="generated-image1" class="generated-image">
+            </div>
+
+            <div class="control-buttons">
+                <label class="file-input-label" for="file-input1">
+                    <img src="src/images/Promptgenerator_Button.svg"/>
+                </label>
+                <input id="file-input1" class="file-input" type="file" webkitdirectory="" directory="">
+                <img class="generate-button" src="src/images/Promptgenerator_Button.svg" onclick="generate(images1, '#generated-image1')">
+            </div>
+
         </div>
 
-        <div id="random-image-container">
+        <div id="generator2">
 
-            <label id="image-title"></label>
+            <img class="title" src="src/images/Promptgenerator_Kop2.svg">
+            <div class="image-container">
+                <img id="generated-image2" class="generated-image">
+            </div>
 
-            <img id="image-container">
-
-        </div>
-
-        <div id="generator">
-
-            <div id="btn-generate">
-                <input type="file" webkitdirectory="" directory="">
-                <button onclick="setRandomImage()">Generate</button>
+            <div class="control-buttons">
+                <label class="file-input-label" for="file-input2">
+                    <img src="src/images/Promptgenerator_Button.svg"/>
+                </label>
+                <input id="file-input2" class="file-input" type="file" webkitdirectory="" directory="">
+                <img class="generate-button" src="src/images/Promptgenerator_Button.svg" onclick="generate(images2, '#generated-image2')">
             </div>
 
         </div>

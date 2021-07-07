@@ -1,28 +1,40 @@
-let images, currentIndex
+let images1 = [], images2 = [], index
 
-document.querySelector('input').addEventListener('change', e => {
-  images = e.target.files
+document.querySelector('#file-input1').addEventListener('change', e => {
+  images1 = e.target.files
+})
+document.querySelector('#file-input2').addEventListener('change', e => {
+  images2 = e.target.files
 })
 
-function setRandomImage(){
+function generate(source, target){
 
-    if(images === undefined) return alert('Select folder first')
+    if(source.length === 0){
 
-    const index = getRandomIndex()
+        return alert('Select folder containing images first')
 
-    if(currentIndex === index) return setRandomImage()
-    currentIndex = index
+    }
 
-    document.querySelector('#image-title').innerHTML = images[index].name
-    document.querySelector('#image-container').src = images[index].webkitRelativePath
+    index = getRandomUniqueIndex(index)
+
+    //document.querySelector('#image-title').innerHTML = images[index].name
+    setRandomImage(source[index], target)
 
 }
 
-function getRandomIndex(){
+function getRandomUniqueIndex(indexToBeSkipped){
 
     const random = Math.random()
-    const index = Math.floor(random * images.length)
+    const index = Math.floor(random * images1.length)
+
+    if(index === indexToBeSkipped) return getRandomUniqueIndex(indexToBeSkipped)
 
     return index
+
+}
+
+function setRandomImage(image, target){
+
+    document.querySelector(target).src = image.webkitRelativePath
 
 }

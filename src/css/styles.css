@@ -1,21 +1,67 @@
 div {
-    margin: 10px;
+    margin: 0px;
 }
 
 header img {
-    width: 500px;
-    height: 200px;
+    width: 60%;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 3%;
 }
 
-#random-image-container {
-    border: 3px dashed yellow;
+#generator1 {
+    margin: auto;
+    width: 60%;
 }
 
-#image-title {
+#generator1 .title {
     display: block;
-    background-color: lightgreen;
+    width: 40%;
 }
 
-#btn-generate {
+#generator2 {
+    margin: auto;
+    width: 60%;
+}
+
+#generator2 .title {
+    display: block;
+    width: 25%;
+}
+
+.image-container {
+    background-image: url('../../src/images/Promptgenerator_Frame.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: calc(100vw * 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -15px;
+}
+
+.generated-image {
+    width: 80%;
+}
+
+.control-buttons {
+    text-align: right;
+    margin-right: 10px;
+    position: relative;
+    top: -15px;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-input-label {
     display: inline-block;
+    width: 20%;
+}
+
+.generate-button {
+    display: inline-block;
+    width: 20%;
 }
