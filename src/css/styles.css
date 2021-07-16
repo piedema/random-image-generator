@@ -1,3 +1,7 @@
+body {
+    margin:0px;
+}
+
 div {
     margin: 0px;
 }
@@ -6,22 +10,18 @@ header img {
     width: 60%;
     margin-left: 50px;
     margin-top: 20px;
-    margin-bottom: 3%;
+    margin-bottom: 8%;
 }
 
-#generator1 {
-    margin: auto;
-    width: 60%;
+.generator-container {
+    margin: 10px;
+    width: calc(50% - 22px);
+    display: inline-block;
 }
 
 #generator1 .title {
     display: block;
     width: 40%;
-}
-
-#generator2 {
-    margin: auto;
-    width: 60%;
 }
 
 #generator2 .title {
@@ -33,7 +33,7 @@ header img {
     background-image: url('../../src/images/Promptgenerator_Frame.svg');
     background-repeat: no-repeat;
     background-size: 100%;
-    height: calc(100vw * 0.25);
+    height: calc(100vw * 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,10 +46,23 @@ header img {
 }
 
 .control-buttons {
-    text-align: right;
-    margin-right: 10px;
     position: relative;
     top: -15px;
+    display: flex;
+}
+
+.left {
+    display: inline-block;
+    text-align: left;
+    width: 50%;
+    padding-left: 20px;
+}
+
+.right {
+    display: inline-block;
+    text-align: right;
+    width: 50%;
+    padding-right: 20px;
 }
 
 .file-input {
@@ -58,10 +71,27 @@ header img {
 
 .file-input-label {
     display: inline-block;
-    width: 20%;
+    width: 40%;
+}
+
+.file-input-label:hover {
+    cursor: pointer;
 }
 
 .generate-button {
     display: inline-block;
-    width: 20%;
+    width: 40%;
+
+}
+
+.generate-button:hover {
+    cursor: pointer;
+}
+
+#generator1 .control-buttons .right .generate-button:hover {
+    content:url("../images/Genereer_mouseover.svg");
+}
+
+#generator2 .control-buttons .right .generate-button:hover {
+    content:url("../images/Genereer_mouseover.svg");
 }

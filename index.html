@@ -11,7 +11,7 @@
             <img src="src/images/Promptgenerator_Header.svg">
         </header>
 
-        <div id="generator1">
+        <div id="generator1" class="generator-container">
 
             <img class="title" src="src/images/Promptgenerator_Kop1.svg">
             <div class="image-container">
@@ -19,16 +19,20 @@
             </div>
 
             <div class="control-buttons">
-                <label class="file-input-label" for="file-input1">
-                    <img src="src/images/Promptgenerator_Button.svg"/>
-                </label>
-                <input id="file-input1" class="file-input" type="file" webkitdirectory="" directory="">
-                <img class="generate-button" src="src/images/Promptgenerator_Button.svg" onclick="generate(images1, '#generated-image1')">
+                <div class="left">
+                    <label class="file-input-label" for="file-input1">
+                        <img src="src/images/Kiesmap.svg"/>
+                    </label>
+                </div>
+                <div class="right">
+                    <input id="file-input1" class="file-input" type="file" webkitdirectory="" directory="">
+                    <img class="generate-button" src="src/images/Genereer_mouseoff.svg" onclick="generate(images1, '#generated-image1')">
+                </div>
             </div>
 
         </div>
 
-        <div id="generator2">
+        <div id="generator2" class="generator-container">
 
             <img class="title" src="src/images/Promptgenerator_Kop2.svg">
             <div class="image-container">
@@ -36,11 +40,15 @@
             </div>
 
             <div class="control-buttons">
-                <label class="file-input-label" for="file-input2">
-                    <img src="src/images/Promptgenerator_Button.svg"/>
-                </label>
-                <input id="file-input2" class="file-input" type="file" webkitdirectory="" directory="">
-                <img class="generate-button" src="src/images/Promptgenerator_Button.svg" onclick="generate(images2, '#generated-image2')">
+                <div class="left">
+                    <label class="file-input-label" for="file-input2">
+                        <img src="src/images/Kiesmap.svg"/>
+                    </label>
+                </div>
+                <div class="right">
+                    <input id="file-input2" class="file-input" type="file" webkitdirectory="" directory="">
+                    <img class="generate-button" src="src/images/Genereer_mouseoff.svg" onclick="generate(images2, '#generated-image2')">
+                </div>
             </div>
 
         </div>
